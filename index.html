@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Preet Goswami | Student • Technology Enthusiast • ICT</title>
+<title>Preet Goswami | Student & Technology Enthusiast</title>
 
-<meta name="description" content="Preet Goswami — Student, Technology Enthusiast and ICT enthusiast at Aga Khan High School, Kampala. Recognized as the IT Brain of Aga Khan High School in 2026.">
+<meta name="description" content="Preet Goswami — Student, Technology Enthusiast and ICT student at Aga Khan High School, Kampala. Recognized as the IT Brain of Aga Khan High School in 2026.">
 
 <style>
 * {
@@ -15,52 +15,402 @@
     padding: 0;
 }
 
-html {
-    scroll-behavior: smooth;
+html,
+body {
+    width: 100%;
+    height: 100%;
 }
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background: #090b12;
-    color: white;
+    background: #080b12;
+    color: #ffffff;
     overflow-x: auto;
     overflow-y: hidden;
 }
 
-body::-webkit-scrollbar {
-    height: 7px;
-}
-
-body::-webkit-scrollbar-thumb {
-    background: #007fff;
-    border-radius: 20px;
-}
-
-.track {
+.page {
     display: flex;
-    width: max-content;
+    width: 500vw;
     height: 100vh;
 }
 
-.panel {
+section {
     width: 100vw;
-    min-width: 100vw;
     height: 100vh;
-    padding: 55px 8vw;
+    flex-shrink: 0;
     display: flex;
     align-items: center;
+    padding: 60px 8vw;
     position: relative;
     overflow: hidden;
 }
 
-.panel::before {
+section::after {
     content: "";
     position: absolute;
-    width: 420px;
-    height: 420px;
-    border-radius: 50%;
+    width: 350px;
+    height: 350px;
     background: rgba(0,127,255,0.12);
-    filter: blur(70px);
-    top: -120px;
+    border-radius: 50%;
+    filter: blur(80px);
     right: -100px;
+    top: -100px;
 }
+
+.content {
+    position: relative;
+    z-index: 2;
+    max-width: 1000px;
+}
+
+/* NAVIGATION */
+
+nav {
+    position: fixed;
+    z-index: 10;
+    top: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 5px;
+    padding: 8px;
+    background: rgba(20,23,32,0.9);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 50px;
+}
+
+nav button {
+    border: none;
+    background: transparent;
+    color: #aeb5c0;
+    padding: 10px 14px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+nav button:hover {
+    background: #007fff;
+    color: white;
+}
+
+/* HOME */
+
+.home {
+    background:
+        radial-gradient(circle at 75% 50%, rgba(0,127,255,0.18), transparent 35%),
+        #080b12;
+}
+
+.tag {
+    color: #007fff;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: clamp(55px, 9vw, 110px);
+    line-height: 0.9;
+    letter-spacing: -5px;
+    margin-bottom: 25px;
+}
+
+.subtitle {
+    color: #b9c0cb;
+    font-size: 21px;
+    line-height: 1.5;
+}
+
+/* GENERAL */
+
+.label {
+    color: #007fff;
+    font-size: 12px;
+    letter-spacing: 3px;
+    font-weight: bold;
+    margin-bottom: 18px;
+}
+
+h2 {
+    font-size: clamp(45px, 7vw, 85px);
+    line-height: 1;
+    letter-spacing: -3px;
+    margin-bottom: 25px;
+}
+
+.text {
+    color: #b8bec8;
+    font-size: 18px;
+    line-height: 1.8;
+    max-width: 750px;
+}
+
+/* ACHIEVEMENT */
+
+.card {
+    margin-top: 30px;
+    padding: 35px;
+    max-width: 800px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 25px;
+}
+
+.year {
+    display: inline-block;
+    color: #007fff;
+    border: 1px solid #007fff;
+    padding: 7px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    margin-bottom: 18px;
+}
+
+.card h3 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+/* WORK */
+
+.work {
+    border-left: 4px solid #007fff;
+    padding: 30px;
+    background: rgba(255,255,255,0.04);
+    max-width: 850px;
+    border-radius: 0 20px 20px 0;
+}
+
+.work h3 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+/* EDUCATION */
+
+.boxes {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.box {
+    width: 280px;
+    padding: 25px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 20px;
+}
+
+.box small {
+    color: #007fff;
+    letter-spacing: 2px;
+}
+
+.box h3 {
+    margin-top: 12px;
+    font-size: 20px;
+}
+
+.footer {
+    margin-top: 35px;
+    color: #68707d;
+    font-size: 13px;
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    nav {
+        max-width: 94%;
+        overflow-x: auto;
+    }
+
+    nav button {
+        white-space: nowrap;
+        font-size: 11px;
+        padding: 9px 11px;
+    }
+
+    section {
+        padding: 80px 25px 40px;
+    }
+
+    h1 {
+        font-size: 58px;
+        letter-spacing: -3px;
+    }
+
+    h2 {
+        font-size: 48px;
+    }
+
+    .subtitle {
+        font-size: 17px;
+    }
+
+    .card {
+        padding: 25px;
+    }
+
+    .boxes {
+        flex-direction: column;
+    }
+
+    .box {
+        width: 100%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <button onclick="go(0)">Home</button>
+    <button onclick="go(1)">About</button>
+    <button onclick="go(2)">Recognition</button>
+    <button onclick="go(3)">Work</button>
+    <button onclick="go(4)">Education</button>
+</nav>
+
+<div class="page">
+
+    <!-- HOME -->
+    <section class="home">
+        <div class="content">
+            <div class="tag">PERSONAL ACHIEVEMENT PROFILE • 2026</div>
+
+            <h1>PREET<br>GOSWAMI</h1>
+
+            <p class="subtitle">
+                Student • Technology Enthusiast • ICT
+            </p>
+        </div>
+    </section>
+
+
+    <!-- ABOUT -->
+    <section>
+        <div class="content">
+            <div class="label">01 — ABOUT</div>
+
+            <h2>Technology.<br>Curiosity.<br>Purpose.</h2>
+
+            <p class="text">
+                Preet Goswami is a student at Aga Khan High School,
+                Kampala, with a strong interest in Information and
+                Communication Technology and digital innovation.
+            </p>
+
+            <br>
+
+            <p class="text">
+                He continues to develop his technology skills through
+                school projects, practical experiences and digital
+                initiatives.
+            </p>
+        </div>
+    </section>
+
+
+    <!-- RECOGNITION -->
+    <section>
+        <div class="content">
+            <div class="label">02 — RECOGNITION</div>
+
+            <h2>IT Brain of<br>Aga Khan High School</h2>
+
+            <div class="card">
+                <div class="year">2026</div>
+
+                <h3>IT Brain of Aga Khan High School</h3>
+
+                <p class="text">
+                    Recognized at the 2026 Prize Giving Day as the
+                    IT Brain of Aga Khan High School, in recognition
+                    of achievement, aptitude and contribution in
+                    Information and Communication Technology.
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- WORK PLACEMENT -->
+    <section>
+        <div class="content">
+            <div class="label">03 — EXPERIENCE</div>
+
+            <h2>Work Placement<br>2026</h2>
+
+            <div class="work">
+                <h3>Student Spotlight</h3>
+
+                <p class="text">
+                    Recognized by Aga Khan High School for exceptional
+                    commitment during the 2026 Work Placement Programme.
+                </p>
+
+                <br>
+
+                <p class="text">
+                    From 17th to 28th August 2026, Preet consistently
+                    submitted his daily work-placement logs and
+                    promptly completed his Work Placement Report.
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- EDUCATION -->
+    <section>
+        <div class="content">
+            <div class="label">04 — EDUCATION</div>
+
+            <h2>Learning<br>with purpose.</h2>
+
+            <div class="boxes">
+
+                <div class="box">
+                    <small>SCHOOL</small>
+                    <h3>Aga Khan High School</h3>
+                    <p class="text">Kampala, Uganda</p>
+                </div>
+
+                <div class="box">
+                    <small>LEVEL</small>
+                    <h3>Secondary Student</h3>
+                    <p class="text">S3 • 2026</p>
+                </div>
+
+                <div class="box">
+                    <small>INTEREST</small>
+                    <h3>Information & Communication Technology</h3>
+                </div>
+
+            </div>
+
+            <p class="footer">
+                © 2026 Preet Goswami • Personal Achievement Profile
+            </p>
+        </div>
+    </section>
+
+</div>
+
+<script>
+function go(number) {
+    window.scrollTo({
+        left: window.innerWidth * number,
+        behavior: "smooth"
+    });
+}
+</script>
+
+</body>
+</html>
