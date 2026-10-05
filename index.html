@@ -1,107 +1,66 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Preet Goswami | Student & Technology Enthusiast</title>
+
+<title>Preet Goswami | Student • Technology Enthusiast • ICT</title>
+
+<meta name="description" content="Preet Goswami — Student, Technology Enthusiast and ICT enthusiast at Aga Khan High School, Kampala. Recognized as the IT Brain of Aga Khan High School in 2026.">
 
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-
-body{
-font-family:Arial,sans-serif;
-background:#080d18;
-color:white;
-overflow-x:auto;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-main{
-display:flex;
-width:max-content;
+html {
+    scroll-behavior: smooth;
 }
 
-section{
-width:100vw;
-min-height:100vh;
-padding:70px;
-display:flex;
-align-items:center;
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #090b12;
+    color: white;
+    overflow-x: auto;
+    overflow-y: hidden;
 }
 
-.hero{
-background:linear-gradient(135deg,#080d18,#102b4a);
+body::-webkit-scrollbar {
+    height: 7px;
 }
 
-h1{
-font-size:90px;
-line-height:.9;
+body::-webkit-scrollbar-thumb {
+    background: #007fff;
+    border-radius: 20px;
 }
 
-h2{
-font-size:55px;
-margin-bottom:25px;
+.track {
+    display: flex;
+    width: max-content;
+    height: 100vh;
 }
 
-p{
-font-size:20px;
-line-height:1.6;
-color:#b8c7d9;
-max-width:750px;
+.panel {
+    width: 100vw;
+    min-width: 100vw;
+    height: 100vh;
+    padding: 55px 8vw;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
 }
 
-.label{
-color:#39a9ff;
-letter-spacing:4px;
-margin-bottom:25px;
+.panel::before {
+    content: "";
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    border-radius: 50%;
+    background: rgba(0,127,255,0.12);
+    filter: blur(70px);
+    top: -120px;
+    right: -100px;
 }
-
-.card{
-margin-top:25px;
-padding:30px;
-border:1px solid #294563;
-border-radius:20px;
-max-width:700px;
-background:#101a29;
-}
-
-@media(max-width:700px){
-section{padding:35px}
-h1{font-size:55px}
-h2{font-size:40px}
-p{font-size:17px}
-}
-</style>
-</head>
-
-<body>
-
-<main>
-
-<section class="hero">
-<div>
-<div class="label">STUDENT • TECHNOLOGY ENTHUSIAST • ICT</div>
-<h1>PREET<br>GOSWAMI</h1>
-<p>Exploring technology, ICT and digital innovation.</p>
-</div>
-</section>
-
-<section>
-<div>
-<div class="label">ABOUT</div>
-<h2>Preet Goswami</h2>
-<p>
-Preet Goswami is a student and technology enthusiast interested in
-Information and Communication Technology, digital innovation and
-technology-driven projects.
-</p>
-</div>
-</section>
-
-<section>
-<div>
-<div class="label">ACHIEVEMENT • 2026</div>
-<h2>IT Brain of<br>Aga Khan High School</h2>
-
-<div class="card">
-<p>
-Preet Goswami was recognized as
